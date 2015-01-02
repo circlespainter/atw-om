@@ -1,9 +1,9 @@
-(ns leiningen.new.atw-om
+(ns leiningen.new.comsat-ring-template
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]))
 
-(def render (renderer "atw-om"))
+(def render (renderer "comsat-ring-template"))
 
-(defn atw-om [name]
+(defn comsat-ring-template [name]
   (let [data {:name name
               :sanitized (name-to-path name)}]
     (->files data
@@ -11,4 +11,6 @@
       ["src/clj/{{sanitized}}/core.clj" (render "core.clj" data)]
       ["src/cljs/{{sanitized}}/core.cljs" (render "core.cljs" data)]
       ["resources/public/index.html" (render "index.html" data)]
-      [".gitignore" (render "gitignore" data)])))
+      [".gitignore" (render "gitignore" data)]
+      [".travis.yml" (render "travis.yml" data)]
+      ["README.md" (render "README.md" data)])))

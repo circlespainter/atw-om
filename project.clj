@@ -1,10 +1,10 @@
-(defproject atw-om/lein-template "0.1.8"
-  :description "Clojure, all the way with Om"
-  :url "https://github.com/zaiste/atw-om"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+(defproject comsat-ring-template/lein-template "0.1.0"
+
+  :description "Comsat-Ring Leiningen template using Moustache, ClojureScript, Om and core.async."
+  :url "https://github.com/puniverse/comsat-ring-template"
+  :licenses [{:name "Eclipse Public License" :url "http://www.eclipse.org/legal/epl-v10.html"}
+             {:name "GNU Lesser General Public License - v 3" :url "http://www.gnu.org/licenses/lgpl.html"}]
   :scm {:name "git"
-        :url "https://github.com/zaiste/atw-om"}
-  :signing {:gpg-key "oh@zaiste.net"}
-  :deploy-repositories [["clojars" {:creds :gpg}]]
+        :url "https://github.com/puniverse/comsat-ring-template"}
+
   :eval-in-leiningen true)
