@@ -4,8 +4,6 @@
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [co.paralleluniverse/comsat-ring-jetty9 "0.3.0"]
-                 [ring/ring-core "1.3.2"]
-                 [ring/ring-devel "1.3.2"]
                  [ring/ring-json "0.3.1"]
                  [net.cgrand/moustache "1.1.0" :exclusions [org.clojure/clojure ring/ring-core]]
                  [org.clojure/clojurescript "0.0-2629"]
@@ -24,10 +22,14 @@
 
   :main {{name}}.core/run
 
-  :java-agents [[co.paralleluniverse/quasar-core "0.6.2"]]
+  :java-agents [[co.paralleluniverse/quasar-core "0.6.2"
+                 ; :options "vdmc"
+                 ]]
 
-  ; TODO Comment out before production
-  :jvm-opts ["-Dco.paralleluniverse.fibers.verifyInstrumentation=true"]
+
+  :jvm-opts ["-Dco.paralleluniverse.fibers.verifyInstrumentation=true" ; TODO Comment out before production
+             ; "-Xdebug" "-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+             ]
 
   :source-paths ["src/clj"]
 

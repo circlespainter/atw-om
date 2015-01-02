@@ -3,8 +3,6 @@
     (:require [co.paralleluniverse.pulsar.core :as pc]
       [ring.middleware.json :as midjson]
       [ring.middleware.resource :as midres]
-      [ring.middleware.reload :as midreload]
-      [ring.middleware.stacktrace :as midstcktrc]
       [net.cgrand.moustache :as moustache]
       [ring.util.response :as ringres])
     (:import (co.paralleluniverse.fibers Fiber)))
