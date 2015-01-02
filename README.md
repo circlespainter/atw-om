@@ -1,7 +1,6 @@
 # _comsat-ring-template_
 
-Comsat-Ring Leiningen template using [Moustache](https://github.com/cgrand/moustache), [ClojureScript](https://github.com/clojure/clojurescript), [core.async](https://github.com/clojure/core.async) and [Om](https://github.com/swannodette/om)
-Ported from [atw-om](https://github.com/zaiste/atw-om).
+Comsat-Ring Leiningen template using [Moustache](https://github.com/cgrand/moustache), [ClojureScript](https://github.com/clojure/clojurescript), [core.async](https://github.com/clojure/core.async) and [Om](https://github.com/swannodette/om).
 
 ## Usage
 
