@@ -16,6 +16,7 @@ Wait till ClojureScript is compiled, then go to `localhost:8080`.
 ## License
 
 Copyright © 2014 Zaiste
+
 Copyright © 2015 Parallel Universe
 
 Distributed under the Eclipse Public License either version 1.0 or (at
