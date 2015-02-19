@@ -3,7 +3,8 @@
   :url "http://example.com/TODO FIXME"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [co.paralleluniverse/comsat-ring-jetty9 "0.3.0"]
+                 [co.paralleluniverse/comsat-ring-jetty9 "0.3.0" :exclusions [co.paralleluniverse/pulsar]]
+                 [co.paralleluniverse/pulsar "0.6.3-SNAPSHOT"]
                  [ring/ring-json "0.3.1"]
                  [net.cgrand/moustache "1.1.0" :exclusions [org.clojure/clojure ring/ring-core]]
                  [org.clojure/clojurescript "0.0-2629"]
@@ -23,11 +24,13 @@
   :main {{name}}.core/run
 
   :java-agents [[co.paralleluniverse/quasar-core "0.6.2"
+                 :options "m"
                  ; :options "vdmc"
                  ]]
 
 
   :jvm-opts ["-Dco.paralleluniverse.fibers.verifyInstrumentation=true" ; TODO Comment out before production
+             "-Dco.paralleluniverse.pulsar.instrument.auto=all"
              ; "-Xdebug" "-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
              ]
 
