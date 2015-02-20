@@ -11,7 +11,6 @@
       ["src/clj/{{sanitized}}/core.clj" (render "core.clj" data)]
       ["src/cljs/{{sanitized}}/core.cljs" (render "core.cljs" data)]
       ["resources/public/index.html" (render "index.html" data)]
-      ["resources/META-INF/suspendables" (render "suspendables" data)]
       [".gitignore" (render "gitignore" data)]
       [".travis.yml" (render "travis.yml" data)]
       ["README.md" (render "README.md" data)])))

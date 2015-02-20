@@ -23,13 +23,13 @@
 
   :main {{name}}.core/run
 
-  :java-agents [[co.paralleluniverse/quasar-core "0.6.2"
-                 :options "m"
+  :java-agents [[co.paralleluniverse/quasar-core "0.6.3-SNAPSHOT"
+                 :options "xm"
                  ; :options "vdmc"
                  ]]
 
 
-  :jvm-opts ["-Dco.paralleluniverse.fibers.verifyInstrumentation=true" ; TODO Comment out before production
+  :jvm-opts [;"-Dco.paralleluniverse.fibers.verifyInstrumentation=true" ; Don't enable in production
              "-Dco.paralleluniverse.pulsar.instrument.auto=all"
              ; "-Xdebug" "-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
              ]
