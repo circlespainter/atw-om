@@ -2,19 +2,19 @@
   :description "TODO FIXME: write this!"
   :url "http://example.com/TODO FIXME"
 
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [co.paralleluniverse/comsat-ring-jetty9 "0.3.0"]
+  :dependencies [[org.clojure/clojure "1.7.0-RC1"]
+                 [co.paralleluniverse/comsat-ring-jetty9 "0.4.0-SNAPSHOT"]
                  [ring/ring-json "0.3.1"]
                  [net.cgrand/moustache "1.1.0" :exclusions [org.clojure/clojure ring/ring-core]]
-                 [org.clojure/clojurescript "0.0-2629"]
+                 [org.clojure/clojurescript "0.0-3308"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
-                 [cljs-http "0.1.23"]
-                 [om "0.8.0-beta5"]
-                 [figwheel "0.2.0-SNAPSHOT"]]
+                 [cljs-http "0.1.35"]
+                 [org.omcljs/om "0.8.8"]
+                 [figwheel "0.3.3"]]
 
-  :plugins [[lein-cljsbuild "1.0.4"]
+  :plugins [[lein-cljsbuild "1.0.6"]
             [lein-pdo "0.1.1"]
-            [lein-figwheel "0.2.0-SNAPSHOT"]]
+            [lein-figwheel "0.3.3"]]
 
   :aliases {"up" ["pdo" "cljsbuild" "auto" "dev," "run"]}
 
@@ -22,7 +22,7 @@
 
   :main {{name}}.core/run
 
-  :java-agents [[co.paralleluniverse/quasar-core "0.6.2"
+  :java-agents [[co.paralleluniverse/quasar-core "0.7.1-SNAPSHOT"
                  ; :options "vdmc"
                  ]]
 
