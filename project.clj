@@ -1,4 +1,4 @@
-(defproject comsat-ring-template/lein-template "0.1.1"
+(defproject comsat-ring-template/lein-template "0.1.2"
 
   :description "Comsat-Ring Leiningen template using Moustache, ClojureScript, Om and core.async."
   :url "https://github.com/puniverse/comsat-ring-template"
