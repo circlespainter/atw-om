@@ -2,11 +2,11 @@
   :description "TODO FIXME: write this!"
   :url "http://example.com/TODO FIXME"
 
-  :dependencies [[org.clojure/clojure "1.7.0-RC1"]
-                 [co.paralleluniverse/comsat-ring-jetty9 "0.4.0-SNAPSHOT"]
+  :dependencies [[org.clojure/clojure "1.6.0"]
+                 [co.paralleluniverse/comsat-ring-jetty9 "0.4.0"]
                  [ring/ring-json "0.3.1"]
                  [net.cgrand/moustache "1.1.0" :exclusions [org.clojure/clojure ring/ring-core]]
-                 [org.clojure/clojurescript "0.0-3308"]
+                 [org.clojure/clojurescript "0.0-3211"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [cljs-http "0.1.35"]
                  [org.omcljs/om "0.8.8"]
@@ -22,7 +22,7 @@
 
   :main {{name}}.core/run
 
-  :java-agents [[co.paralleluniverse/quasar-core "0.7.1-SNAPSHOT"
+  :java-agents [[co.paralleluniverse/quasar-core "0.7.2"
                  ; :options "vdmc"
                  ]]
 
