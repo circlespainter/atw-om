@@ -56,4 +56,3 @@
 
 (om/root om-app app-state
          {:target (. js/document (getElementById "content"))})
-

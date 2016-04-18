@@ -2,36 +2,32 @@
   :description "TODO FIXME: write this!"
   :url "http://example.com/TODO FIXME"
 
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [co.paralleluniverse/comsat-ring-jetty9 "0.4.0" :exclusions [co.paralleluniverse/pulsar]]
-                 [co.paralleluniverse/pulsar "0.7.2"]
-                 [ring/ring-json "0.3.1"]
+  :dependencies [[org.clojure/clojure "1.7.0"]
+                 [co.paralleluniverse/comsat-ring-jetty9 "0.7.0"]
+                 [ring/ring-json "0.4.0"]
                  [net.cgrand/moustache "1.1.0" :exclusions [org.clojure/clojure ring/ring-core]]
-                 [org.clojure/clojurescript "0.0-3211"]
-                 [org.clojure/core.async "0.1.346.0-17112a-alpha"]
-                 [cljs-http "0.1.35"]
-                 [org.omcljs/om "0.8.8"]
-                 [figwheel "0.3.3"]]
+                 [org.clojure/clojurescript "1.8.40"]
+                 [org.clojure/core.async "0.2.374"]
+                 [cljs-http "0.1.37"]
+                 [org.omcljs/om "0.9.0"]
+                 [figwheel "0.5.2"]]
 
-  :plugins [[lein-cljsbuild "1.0.6"]
+  :plugins [[lein-cljsbuild "1.1.3"]
             [lein-pdo "0.1.1"]
-            [lein-figwheel "0.3.3"]]
+            [lein-figwheel "0.5.2"]]
 
   :aliases {"up" ["pdo" "cljsbuild" "auto" "dev," "run"]}
 
-  :min-lein-version "2.5.0"
-
   :main {{name}}.core/run
 
-  :java-agents [[co.paralleluniverse/quasar-core "0.7.2"
-                 :options "m"
+  :java-agents [[co.paralleluniverse/quasar-core "0.7.4"
                  ; :options "vdmc"
                  ]]
 
 
-  :jvm-opts [;"-Dco.paralleluniverse.fibers.verifyInstrumentation=true" ; Don't enable in production
+  :jvm-opts ["-Dco.paralleluniverse.fibers.verifyInstrumentation=true" ; TODO Comment out before production
              "-Dco.paralleluniverse.pulsar.instrument.auto=all"
-             ; "-Xdebug" "-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+             ; "-Xdebug" "-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
              ]
 
   :source-paths ["src/clj"]
